@@ -1,0 +1,294 @@
+/*Styles for the Scheduler*/
+
+/*lock screen orientation in landscape*/
+@media screen and (orientation: portrait) {
+	html {
+	  /* Rotate the content container */
+	  transform: rotate(-90deg);
+	  transform-origin: left top;
+	  /* Set content width to viewport height */
+	  width: 100vh;
+	  /* Set content height to viewport width */
+	  height: 100vw;
+	  overflow-x: hidden;
+	  position: absolute;
+	  top: 100%;
+	  left: 0;
+	}
+  }
+  
+body{
+	font-family: Arial, sans-serif;
+	background-color: #ef4048;
+	color: white;
+	text-align: center;
+	height: 100%;
+	margin-top: 15px;
+
+}
+img{
+	height: auto;
+	width: min(75%, 300px);
+}
+section{
+	background-color: white;
+	color: #ef4048;
+	padding: 5px;
+}
+
+input{
+	padding: 10px;
+	margin: 10px;
+	border: 3px solid #ef4048;
+	outline: none;
+	border-radius: 8px;
+}
+
+button{
+	font-size: 18px;
+	background-color: #ef4048;
+	color: white;
+	border: none;
+	margin: 10px;
+	padding: 10px;
+	border-radius: 8px;
+
+	
+}
+
+#logout{
+	font-size: 18px;
+	background-color: white;
+	/*background-color: blue;*/
+	color: #ef4048;
+	border: none;
+	margin: 10px;
+	padding: 10px;
+	border-radius: 8px; /*curves corners of buttons*/
+	position:absolute;
+   	right:0px;
+   	top:5px;
+}
+
+table{
+	width: 75%;
+	margin: auto;
+}
+
+table th{
+	border: 1px solid #ef4048;
+    background-color: white;
+}
+table td{
+    background-color: #ef4048;
+    padding: 10px;
+}
+
+
+.buttonAlt{
+	font-size: 12px;
+	background-color: #ef4048;
+	color: white;
+	border: none;
+	margin: 10px;
+	padding: 10px;
+	border-radius: 8px;
+}
+
+.buffer{
+    padding: 60px;
+}
+
+p{
+    font-size: 18px;
+    color:black
+}
+
+/*Interior display*/
+.interior{
+	
+	display: grid; 
+	grid-template-rows: 0.15fr 0.9fr ;
+	grid-template-columns: 0.15fr 1fr 0.15fr;
+	gap: 0px;
+	height: 100%;
+	background-color: white;
+	gap: 0;
+	
+	
+ }
+   
+ #left {
+  
+	grid-row-start: 2;
+	grid-column-start: 1;
+ 
+	grid-row-end: 4;
+	grid-column-end: 2;
+	border:3px solid #ef4048;
+	
+	
+ }
+ #right {
+  
+	grid-row-start: 2;
+	grid-column-start: 3;
+ 
+	grid-row-end: 4;
+	grid-column-end: 4;
+	border:3px solid #ef4048;
+	
+ }
+ 
+ 
+
+ #top{
+	grid-row-start: 1;
+	grid-column-start: 1;
+ 
+	grid-row-end: 2;
+	grid-column-end: 4;
+	border:3px solid #ef4048;
+	
+	
+ }
+ 
+ #image {
+
+	grid-row-start: 2;
+	grid-column-start: 2;
+ 
+	grid-row-end: 4;
+	grid-column-end: 3;
+	bottom: 0px;
+	border:3px solid #ef4048;
+	
+ }
+
+ #current{
+	width: 100%;
+	height: 80%;  /*was at 65% */
+ }
+
+ #showRooms{
+	color: #ef4048; 
+	margin-top: 20px;
+	text-decoration: underline; 
+ }
+
+ #bottom {
+
+	grid-row-start: 3;
+	grid-column-start: 2;
+ 
+	grid-row-end: 4;
+	grid-column-end: 3;
+ }
+
+
+/*Entrances page*/
+.entrances {
+	display: flex;
+	flex-wrap: wrap;
+   grid-template-rows: 1fr 1fr;
+   grid-template-columns: 1fr 1fr;
+   
+   gap: 1px;
+   height: 100%;
+ 
+   
+}
+  
+#ne{
+
+	flex: 25%;
+  padding: 0px;
+   background-color: #ef4048; 
+   grid-row-start: 1;
+   grid-column-start: 1;
+   width:100%;
+   grid-row-end: 2;
+   grid-column-end: 2;
+   
+}
+#nw{
+
+	flex: 25%;
+  padding: 0px;
+   background-color: #ef4048; 
+   grid-row-start: 1;
+   grid-column-start: 2;
+   width:100%;
+   grid-row-end: 2;
+   grid-column-end: 3;
+   
+}
+#se{
+
+	flex: 25%;
+  padding: 00px;
+   background-color: #ef4048; 
+   grid-row-start: 2;
+   grid-column-start: 2;
+   width:100%;
+   grid-row-end: 3;
+   grid-column-end: 3;
+   
+}
+#sw {
+
+	flex: 25%;
+  	padding: 0px;
+   background-color: #ef4048; 
+   grid-row-start: 2;
+   grid-column-start: 1;
+   width:100%;
+   position: relative;
+   grid-row-end: 3;
+   grid-column-end: 2;
+   
+}
+
+/*button icon classes */
+.forwardArrowIcon{
+	background-image: url(../images/icons/forward_arrow_full.jpg);
+	background-size: cover;
+	width: 55px;
+	height: 55px;
+}
+.leftArrowIcon{
+	background-image: url(../images/icons/left_arrow_full.jpg);
+	background-size: cover;
+	width: 55px;
+	height: 55px;
+}
+.rightArrowIcon{
+	background-image: url(../images/icons/right_arrow_full.jpg);
+	background-size: cover;
+	width: 55px;
+	height: 55px;
+}
+.backwardArrowIcon{
+	background-image: url(../images/icons/backward_arrow_full.jpg);
+	background-size: cover;
+	width: 55px;
+	height: 55px;
+}
+.upArrowIcon{
+	background-image: url(../images/icons/stairs_up.jpg);
+	background-size: cover;
+	width: 55px;
+	height: 55px;
+}
+.downArrowIcon{
+	background-image: url(../images/icons/stairs_down.jpg);
+	background-size: cover;
+	width: 55px;
+	height: 55px;
+}
+.hidden{
+	visibility: hidden;
+}
+.visible{
+	visibility: visible;
+}

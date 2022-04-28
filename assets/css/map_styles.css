@@ -1,0 +1,167 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*Styles for the Scheduler*/
+body{
+	font-family: Arial, sans-serif;
+	background-color: #EF4048;
+	color: white;
+	text-align: center;
+}
+
+section{
+	padding: 10px;
+}
+
+img{
+	height: 25%;
+	width: auto;
+}
+
+.smallLogo {
+	height: 15%;
+	width: 15%;
+}
+
+#logout{
+	font-size: 18px;
+	background-color: white;
+	/*background-color: blue;*/
+	color: #ef4048;
+	border: none;
+	margin: 10px;
+	padding: 10px;
+	border-radius: 8px; /*curves corners of buttons*/
+	position:absolute;
+   right:0px;
+   top:5px;
+}
+
+input{
+	padding: 10px;
+	margin: 10px;
+	border: 3px solid red;
+	outline: none;
+	border-radius: 8px;
+}
+
+/*
+select::-ms-expand {
+    display: none; 
+}
+*/
+
+select {
+/*
+    -webkit-appearance: none;
+    -moz-appearance: none;
+*/
+	appearance: none;
+	background-color: white;
+	border: none;
+	padding: 10px;
+	margin: 0;
+	font-size: 18px;
+}
+
+header input[type=text] {
+	background: white;
+	border: 3px solid white;
+	border-radius: 10px;
+	color: #EF4048;
+	font-size: 16px;
+}
+
+button {
+}
+
+#mapSection {
+	height: 575px;
+	display: flex;
+	flex-direction: column;
+}
+
+#map {
+	width: 500px;
+	max-width: 600px;
+	height: 80%;
+	background-color: white;
+	margin: auto;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+#mapUiUpper, #mapUiLower {
+	background-color: white;
+	color: red;
+	padding: 10px;
+	width: 500px;
+	max-width: 600px;
+	margin: auto;
+	height: 10%;
+	display: flex;
+	align-content: center;
+	justify-content: center;
+}
+
+#mapUiUpper {
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
+
+#mapUiLower {
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+
+#mapUiUpper p, #mapUiLower p {
+	margin: 0;
+	font-size: 22px;
+	display: flex;
+	align-self: center;
+	justify-self: center;
+}
+
+button{
+	font-size: 18px;
+	background-color: white;
+	color: red;
+	border: none;
+	margin: 10px;
+	padding: 10px;
+	border-radius: 8px;
+}
+
+button:hover {
+	background-color: lightgray;
+	cursor:pointer;
+}
+
+footer button {
+	background-color: white;
+	color: #EF4048;
+}
+
+.methodToggle {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: lightgray;
+	border-radius: 10px;
+	color: gray;
+	padding: 10px;
+	margin: 0 5px;
+}
+
+.methodToggle:hover, .methodToggleSelected {
+	cursor: pointer;
+}
+
+.methodToggleSelected {
+	background-color: red;
+	color: white;
+}
+

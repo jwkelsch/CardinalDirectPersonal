@@ -1,0 +1,115 @@
+body{
+  background:#ef4048;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin-top: 20px;
+}
+/*Header at top*/
+h1{
+  color: #fff;
+  padding-bottom: 2rem;
+  font-weight: bold;
+  
+}
+/*form box border color*/
+a{
+  color: #333;
+}
+/*changes color of button above form box when hovered*/
+a:hover{
+  color:#ef4048;
+  text-decoration: none;
+}
+/*white background of box*/
+.form-control:focus {
+
+    color: #000;
+    background-color: #fff;
+    border:2px solid #ef4048;
+    outline: 0;
+    box-shadow: none;
+}
+/*buttons */
+.btn{
+  background: #ef4048;
+  border: #ef4048;
+}
+/*Changes color of button when hovered over*/
+.btn:hover {
+  background: #ef4048;
+  border: #ef4048;
+}
+/*logo*/
+img{
+	height: auto;
+	width: min(75%, 300px);
+}
+
+
+#error-div{
+	display:none;
+	background-color:#ef4048;
+	color:white;
+	border-radius:4px;
+	padding:5px;
+	margin-bottom:5px;
+}
+
+/*SETTINGS CSS*/
+.account-settings .user-profile {
+  margin: 0 0 1rem 0;
+  padding-bottom: 1rem;
+  text-align: center;
+}
+.account-settings .user-profile .user-avatar {
+  margin: 0 0 1rem 0;
+}
+.account-settings .user-profile .user-avatar img {
+  width: 90px;
+  height: 90px;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  border-radius: 100px;
+}
+
+.left{
+  width:48%;
+  float: left;
+}
+
+.right{
+  margin-left: 50%;
+}
+.card {
+  margin: 0 auto;
+  float: none;
+  margin-bottom: 20px;
+
+}
+button{
+	font-size: 18px;
+	background-color: #ef4048;
+	/*background-color: blue;*/
+	color: white;
+	border: none;
+	margin: auto;
+	padding: 10px;
+	border-radius: 8px; /*curves corners of buttons*/	
+  
+
+}
+
+/*logout*/
+#logout{
+	font-size: 18px;
+	background-color: white;
+	/*background-color: blue;*/
+	color: #ef4048;
+	border: none;
+	margin: 10px;
+	padding: 10px;
+	border-radius: 8px; /*curves corners of buttons*/
+	position:absolute;
+   right:0px;
+   top:5px;
+}

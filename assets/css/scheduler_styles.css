@@ -1,0 +1,278 @@
+/*Styles for the Scheduler*/
+body{
+	font-family: Arial, sans-serif;
+	background-color: #ef4048;
+	margin-top: 20px;
+	color: white;
+	text-align: center; /*centers elements*/
+}
+
+section{
+	background-color: white;
+	color: #ef4048;
+	padding: 10px;
+}
+
+/* Sets the image size so that the width is either 75% of the screen
+or it is 300px if 75% of the screen is larger than 300px*/
+img{
+	height: auto;
+	width: min(75%, 300px);
+}
+
+input{
+	padding: 10px;
+	margin: 10px;
+	border: 3px solid #ef4048;
+	outline: none;
+	border-radius: 8px; /*curves corners of buttons*/
+	text-align: center;
+}
+
+button{
+	font-size: 18px;
+	background-color: #ef4048;
+	color: white;
+	border: none;
+	margin: 10px;
+	padding: 10px;
+	border-radius: 8px; /*curves corners of buttons*/	
+	cursor: pointer; /*changes the cursor to a gloved hand*/
+}
+
+#logout{
+	font-size: 18px;
+	background-color: white;
+	color: #ef4048;
+	border: none;
+	margin: 10px;
+	padding: 10px;
+	border-radius: 8px; /*curves corners of buttons*/
+	position:absolute;
+	right:0px;
+	top:5px;
+}
+
+table{
+	width: 80%;
+	margin: auto;
+	border-collapse: collapse;
+}
+
+tr:nth-child(even) {
+	background-color: #f2f2f2; /*zebra-striping of table rows*/
+}
+
+table td{
+	color: #ef4048;
+}
+
+table th{
+	color: white;
+	background-color: #ef4048;
+}
+
+table td, th{
+	border: 1px solid #ef4048;
+	padding: 10px;
+}
+
+.click-cursor{
+	cursor: pointer;
+}
+
+.display-none{
+	display: none;
+}
+
+.card-header{
+	background-color: #ef4048;
+	color: white;
+}
+
+/* Add Class Result Section */
+#classdiv{
+	overflow-x: auto; /* makes the table responsive */
+}
+
+/*Notes*/
+#notes{
+	display: grid;
+	grid-template-columns: repeat(auto-fill, [col-start] minmax(250px, 1fr) [col-end]);
+	margin: auto;
+	padding: 24px;
+	gap: 10px;
+}
+
+#noteform textarea{
+	resize: none;
+	width: min(400px, 80%);
+}
+
+.note{
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.add-note{
+	height: 205px;
+	border: none;
+	outline: none;
+	background: 0 0 7px rgba(0, 0, 0, 0.1);
+	border-radius: 10px;
+	font-size: 120px;
+	color:rgba(0, 0, 0, 0.5);
+	transition: background 0.2s ;
+}
+.add-note:hover{
+	background: rgba(0, 0, 0, 0.2);
+
+}
+label {
+    color: #555;
+}
+
+/*Calender*/
+#calendarmonth{
+	display: inline-block; /*keeps buttons in-line with header*/
+}
+
+#today {
+	color: white;
+	background-color: #ef4048;
+}
+
+.selected {
+	background-color: #a3dce9;
+}
+
+#showEvents {
+	width: 100%;
+	padding: 50px 0;
+	text-align: center;
+	background-color: #a3dce9;
+	margin-top: 20px;
+	position: relative;
+}
+
+#eventDate {
+	background-color: #2692c6;
+	position: absolute; width: 100%;
+	margin: 0 auto;top: 0;
+}
+
+/* Daily Schedule */
+#daily-schedule-header{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 0px;
+}
+
+#left_button{
+	grid-column: 1 / 2;
+}
+
+#date-header{
+	grid-column: 2 / 3;
+}
+
+#right_button{
+	grid-column: 3 / 4;
+}
+
+.scheduler {
+	display: grid; 
+	grid-auto-rows: minmax(100px, auto);
+	grid-template-columns: 1fr 1fr;
+	gap: 0px;
+	height: 100%;
+}
+   
+#assignments {
+	border:3px solid #ef4048; 
+	grid-row: 2 / 3; /* grid row start = 2, grid row end = 3*/
+	grid-column: 1 / 2; /* grid col start = 1, grid col end = 2*/
+}
+ 
+#tasks {
+	border:3px solid #ef4048;
+	grid-row: 2 / 3; /* grid row start = 2, grid row end = 3*/
+	grid-column: 2 / 3; /* grid col start = 1, grid col end = 2*/
+}
+ 
+#events {
+	border:3px solid #ef4048;
+	grid-row: 1 / 2; /* grid row start = 1, grid row end = 2*/
+	grid-column: 1 / 3; /* grid col start = 1, grid col end = 3*/
+}
+
+.progress-bar {
+	width: 0%;
+}
+
+.card-width{
+	width: min(400px, 100%);
+	margin: auto;
+}
+
+/* Icons */
+.add-icon {
+	background-image: url('../images/icons/add.jpg');
+	background-size: cover;
+	width: 48px;
+	height: 48px;
+}
+
+.check-mark-icon {
+	background-image: url('../images/icons/check_mark.jpg');
+	background-size: cover;
+	width: 48px;
+	height: 48px;
+}
+
+.circle-icon {
+	background-image: url('../images/icons/circle.jpg');
+	background-size: cover;
+	width: 48px;
+	height: 48px;
+}
+
+.close-icon {
+	background-image: url('../images/icons/close.jpg');
+	background-size: cover;
+	width: 48px;
+	height: 48px;
+}
+
+.edit-icon {
+	background-image: url('../images/icons/edit.jpg');
+	background-size: cover;
+	width: 48px;
+	height: 48px;
+}
+
+.left-arrow-icon {
+	background-image: url('../images/icons/left_arrow.jpg');
+	background-size: cover;
+	width: 48px;
+	height: 48px;
+}
+
+.right-arrow-icon {
+	background-image: url('../images/icons/right_arrow.jpg');
+	background-size: cover;
+	width: 48px;
+	height: 48px;
+}
+
+.trash-icon {
+	background-image: url('../images/icons/trash.jpg');
+	background-size: cover;
+	width: 48px;
+	height: 48px;
+}
+
+
+
+
+
+	

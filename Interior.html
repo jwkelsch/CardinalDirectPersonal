@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<!-- TODO responsive landscape layout change for mobile aspect ratio-->
+<!--Page for building interior routing/exploration-->
+<html>
+<head>
+	<link rel="icon" href="assets/images/browserIcon.jpg">
+	<meta charset = "utf-8">
+	<meta name="author" content="CSIndustries">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<link href="assets/css/interior_style.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<title>Interior Routing/Exploration</title>
+</head>
+<body>
+	<header>
+		<img src="assets/images/cardinaldirect_logo.jpg" alt="CardinalDirect Logo"/>
+    <button id="logout" class="fa fa-sign-out" type="button"></button><br>
+	</header>
+
+  <div class="interior">
+    
+      <div id="left">
+        <div id="showRooms">Left Rooms</div>
+          <p id="roomsLeft" style="font-size: 12px" style="display: none" >room 101 (1st door on right)</p>
+      </div>
+    
+    <div id="right">
+        <div id="showRooms">Right Rooms</div>
+        <p id="roomsRight" style="font-size: 12px" style="display: none" >room 101 (1st door on right)</p>
+    </div>
+
+    <div id="top">
+      <div style="float:left; width: 10%; position:relative; top: 6px">
+        <button class="exitButton" name="exit" type="button" id="backButton">Back</button>
+      </div>
+      <div style="float:left; width: 40%; position:relative; top: 6px">
+        
+          <!--form validation-->
+          <script>
+            function validateForm() {
+              let x = document.forms["room"]["className"].value;
+              //classrooms
+              if (x != "154" && x != "002" && x != "101"&& x != "317" && x != "315" && x != "313" && x != "307" && x != "301" && x != "325" && x != "323" && x != "321" 
+              && x != "319" && x != "213" && x != "205" && x != "109" && x != "111" && x != "115" && x != "034" && x != "010" && x != "005" && x != "028" && x != "026" 
+              && x != "024" && x != "022" && x != "020" && x != "144" && x != "145" && x != "148" && x != "150" && x != "138" && x != "136" && x != "134" && x != "132" 
+              && x != "128" && x != "126" && x != "124" && x != "122" && x != "118" && x != "116" && x != "112" && x != "106" && x != "113" && x != "252" && x != "250"
+              && x != "248" && x != "244" && x != "242" && x != "238" && x != "236" && x != "234" && x != "232" && x != "228" && x != "226" && x != "224" && x != "222"
+              && x != "218" && x != "216" && x != "318" && x != "322" && x != "324" && x != "326" && x != "328" && x != "332" && x != "334" && x != "336" && x != "338"
+              && x != "342" && x != "344" && x != "352" && x != "350" && x != "348" && x != "103"){
+                alert("Uh oh! Invalid Location.");
+                return false;
+              }
+            }
+          </script>
+         <form  method="GET" id="roomForm" target="_self" name="room" onsubmit="validateForm()"> 
+            <input class="className" name="className" type="option" id= "destination" placeholder="Enter room #" list="locations" required>
+              <datalist id="locations">
+                <option value="002"><option value="005"><option value="010"><option value="020"><option value="022"><option value="024"><option value="026">
+                <option value="028"><option value="034"><option value="013"><option value="015"><option value="038"><option value="040"><option value="042">
+                <option value="112"><option value="113"><option value="101"><option value="103"><option value="107"><option value="109"><option value="111">
+                <option value="115"><option value="116"><option value="118"><option value="122"><option value="124"><option value="126"><option value="128">
+                <option value="132"><option value="134"><option value="136"><option value="138"><option value="144"><option value="145"><option value="205">
+                <option value="213"><option value="216"><option value="218"><option value="222"><option value="224"><option value="226"><option value="228">
+                <option value="232"><option value="234"><option value="236"><option value="238"><option value="242"><option value="244"><option value="248">
+                <option value="250"><option value="252">      
+                <option value="301"><option value="307"><option value="313"><option value="315"><option value="317"><option value="319"><option value="321">
+                <option value="323"><option value="324"><option value="325"><option value="326"><option value="328"><option value="332"><option value="334">
+                <option value="336"><option value="338"><option value="342"><option value="344"><option value="348"><option value="350"><option value="352">
+               
+                </datalist>
+            <button name="confirmDestination" id="createRoute" type="submit" >Create Route</button>
+            
+            <!--<button type="button">Remove Route</button>-->
+         </form> 
+      </div>	
+      <div style="float:right; width: 40%; position:relative; top: 6px">
+        
+        <p style="display:inline;float:left">Directions :&nbsp</p>
+        <p style="display:inline;float:left" id="currentInstruction"></p>
+       
+        <button style="float:right;opacity: .1" type="button" id="prev">Prev</button>
+        <button style="float:right;opacity: .1" type="button" id="next">Next</button>
+      </div>
+    </div>
+
+      <div id="image">
+        <image id="current" src="assets/images/building interiors/floor1/nw_intersection/east.jpg" ></image>
+      </div>
+        <!-- movement controls-->
+    <!-- will likely replace text buttons for image buttons-->
+    <div id="bottom">
+    <button class="button forwardArrowIcon hidden" id="forwardBtn" type="button"></button>
+    <button class="button leftArrowIcon hidden" id="leftBtn" type="button"></button>
+    <button class="button rightArrowIcon hidden" id="rightBtn" type="button"></button>
+    <button class="button backwardArrowIcon hidden" id="backwardBtn" type="button"></button><br>
+    <button class="button upArrowIcon hidden" id="up" type="button"></button>
+    <button class="button downArrowIcon hidden" id="down" type="button"></button><br>
+    <button class="button" id="showExplore" type="button">Toggle Explore Buttons</button><br>
+    
+  </div>
+</div>
+<script src="assets/js/imageFlags.js"></script>
+<script src="assets/js/interior.js"></script>
+<script src="assets/js/interiorButtonHandlers.js"></script>
+<script defer type = "text/javascript" src = "assets/js/routing.js"></script>
+<script defer type = "text/javascript" src = "assets/js/directions.js"></script>
+</body>
+</html>
